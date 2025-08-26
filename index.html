@@ -273,7 +273,70 @@
             margin-bottom: 1rem;
         }
 
-        /* Contact Section */
+        /* About Section */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-image {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #4fa8d8;
+            box-shadow: 0 20px 40px rgba(79, 168, 216, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px rgba(79, 168, 216, 0.4);
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: #b0b8c1;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: rgba(79, 168, 216, 0.1);
+            padding: 1.5rem 1rem;
+            border-radius: 10px;
+            border: 1px solid rgba(79, 168, 216, 0.2);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4fa8d8;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #b0b8c1;
+            font-size: 0.9rem;
+        }
         .contact-info {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -330,6 +393,22 @@
                 padding-left: 1rem;
                 padding-right: 1rem;
             }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .profile-image {
+                width: 220px;
+                height: 220px;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
         }
 
         /* Background Animation */
@@ -382,7 +461,7 @@
                 and building scalable applications using modern technologies.
             </p>
             <div class="cta-buttons">
-                <a href="https://drive.google.com/file/d/1Ar7GHesrpnTHvB5OvSVCsqjbDvu_JIiD/view?usp=drive_link" class="btn btn-primary">Download CV</a>
+                <a href="#" class="btn btn-primary">Download CV</a>
                 <a href="#contact" class="btn btn-secondary">Contact Me</a>
             </div>
         </div>
@@ -391,13 +470,35 @@
     <!-- About Section -->
     <section id="about" class="section">
         <h2 class="section-title">About Me</h2>
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 1.1rem; color: #b0b8c1; line-height: 1.8;">
-                I'm a Computer Science student at Assiut University with a strong passion for competitive programming 
-                and software development. I have participated in multiple programming contests and achieved significant 
-                rankings. Currently, I'm ranked as a Specialist on Codeforces, placing me in the top 3% of programmers 
-                in Egypt. I enjoy solving complex algorithmic problems and building innovative software solutions.
-            </p>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="Ahmed Abdelaziz" class="profile-image">
+            </div>
+            <div class="about-content">
+                <p>
+                    I'm a Computer Science student at Assiut University with a strong passion for competitive programming 
+                    and software development. I have participated in multiple programming contests and achieved significant 
+                    rankings.
+                </p>
+                <p>
+                    Currently, I'm ranked as a Specialist on Codeforces, placing me in the top 3% of programmers 
+                    in Egypt. I enjoy solving complex algorithmic problems and building innovative software solutions.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3K+</span>
+                        <span class="stat-label">Problems Solved</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Top 3%</span>
+                        <span class="stat-label">Codeforces Rank</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
