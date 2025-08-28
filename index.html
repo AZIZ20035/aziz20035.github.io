@@ -789,6 +789,31 @@
             }
         }
 
+        .project-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #2e80cd 0%, #4f88d8 100%);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+}
+
+.project-card:hover .project-link {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #4fa8d8 0%, #ffffff 100%);
+    color: #2e80cd;
+    border-color: #4fa8d8;
+    box-shadow: 0 10px 25px rgba(79, 168, 216, 0.4);
+}
+
+.project-link:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(79, 168, 216, 0.5);
+}
+
         /* Background Animation */
         .hero::before {
             content: '';
@@ -855,25 +880,26 @@
             </div>
             <div class="about-content">
                 <p>
-                    I'm a Computer Science student at Assiut University with a strong passion for competitive programming 
-                    and software development. I have participated in multiple programming contests and achieved significant 
-                    rankings.
+                    Fresh Computer Science graduate from Assiut University, specializing in backend development 
+                    and algorithmic problem solving. I bring a unique combination of academic excellence and 
+                    practical experience gained through competitive programming and real-world internships.
                 </p>
                 <p>
-                    Currently, I'm ranked as a Specialist on Codeforces, placing me in the top 3% of programmers 
-                    in Egypt. I enjoy solving complex algorithmic problems and building innovative software solutions.
+                    With over 3,000 solved problems across various platforms and consistent improvement in programming 
+                    contests, I've developed strong analytical thinking and efficient coding practices that I'm ready to 
+                    contribute to challenging software development projects.
                 </p>
                 <div class="about-stats">
                     <div class="stat-item">
-                        <span class="stat-number">3+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
+       <span class="stat-number">ICPC</span>
+       <span class="stat-label">Instructor</span>
+   </div>
                     <div class="stat-item">
                         <span class="stat-number">3K+</span>
                         <span class="stat-label">Problems Solved</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">Top 3%</span>
+                        <span class="stat-number">Top 4%</span>
                         <span class="stat-label">Codeforces Rank</span>
                     </div>
                 </div>
@@ -1111,25 +1137,25 @@
     <section id="contact" class="section">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-info">
-            <div class="contact-item">
+            <div class="contact-item" onclick="window.open('mailto:abdelaziz9278@gmail.com', '_blank')">
                 <div class="contact-icon">📧</div>
                 <h3>Email</h3>
                 <p>abdelaziz9278@gmail.com</p>
             </div>
             
-            <div class="contact-item">
+            <div class="contact-item" onclick="window.open('tel:+201142681177', '_blank')">
                 <div class="contact-icon">📱</div>
                 <h3>Phone</h3>
                 <p>+20 114 268 1177</p>
             </div>
             
-            <div class="contact-item">
+            <div class="contact-item" onclick="window.open('https://linkedin.com/in/ahmedabdelaziz-dev', '_blank')">
                 <div class="contact-icon">💼</div>
-                <h3>LinkedIn</h3>
+                 <h3>LinkedIn</h3>
                 <p>Ahmed Abdelaziz</p>
             </div>
             
-            <div class="contact-item">
+            <div class="contact-item" onclick="window.open('https://github.com/AZIZ20035', '_blank')">
                 <div class="contact-icon">💻</div>
                 <h3>GitHub</h3>
                 <p>AZIZ20035</p>
