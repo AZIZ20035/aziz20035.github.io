@@ -410,6 +410,8 @@
             cursor: pointer;
             overflow: hidden;
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -421,15 +423,17 @@
 
         .project-image {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            aspect-ratio: 16 / 9;
+            height: auto;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.04);
             border-radius: 10px;
             margin-bottom: 1.5rem;
             transition: all 0.4s ease;
         }
 
         .project-card:hover .project-image {
-            transform: scale(1.1);
+            transform: scale(1.03);
             filter: brightness(1.2);
         }
 
@@ -449,6 +453,7 @@
             color: #b0b8c1;
             margin-bottom: 1rem;
             transition: color 0.3s ease;
+            flex: 1;
         }
 
         .project-card:hover p {
@@ -460,6 +465,25 @@
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-bottom: 1rem;
+        }
+
+        .project-badge {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            margin-bottom: 1rem;
+            padding: 0.35rem 0.8rem;
+            border-radius: 999px;
+            border: 1px solid rgba(79, 168, 216, 0.25);
+            background: rgba(79, 168, 216, 0.12);
+            color: #8cc7ef;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .project-actions {
+            margin-top: auto;
         }
 
         .tech-tag {
@@ -814,6 +838,14 @@
     box-shadow: 0 15px 35px rgba(79, 168, 216, 0.5);
 }
 
+        .section-intro {
+            max-width: 760px;
+            margin: -1.5rem auto 2rem;
+            text-align: center;
+            color: #b0b8c1;
+            line-height: 1.7;
+        }
+
         /* Background Animation */
         .hero::before {
             content: '';
@@ -846,6 +878,7 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#freelance" class="nav-link">Freelance</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#achievements" class="nav-link">Achievements</a></li>
@@ -858,11 +891,11 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Hi, I'm <span class="highlight">Ahmed Abdelaziz</span></h1>
-            <p class="hero-subtitle">Computer Science Student | Competitive Programmer</p>
+            <p class="hero-subtitle">Full-Stack Software Developer | ITI Student | Competitive Programmer</p>
             <p class="hero-description">
-                Passionate computer science student with expertise in competitive programming, 
-                web development, and software engineering. Specialized in algorithms, data structures, 
-                and building scalable applications using modern technologies.
+                Full-stack developer from Egypt focused on .NET technologies, modern web development, 
+                and practical software delivery. I build real systems, deploy production-ready solutions, 
+                and keep sharpening my problem-solving through competitive programming.
             </p>
             <div class="cta-buttons">
                 <a href="https://drive.google.com/drive/u/1/folders/1pwYAsLphVXqsIToe4tEN3rHt1F3PWqgq" class="btn btn-primary">Download CV</a>
@@ -876,31 +909,30 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-container">
             <div class="about-image">
-                <img src="images/profile.jpg" alt="Ahmed Abdelaziz" class="profile-image">
+                <img src="images/photo_2026-07-12_12-33-17.jpg" alt="Ahmed Abdelaziz" class="profile-image">
             </div>
             <div class="about-content">
                 <p>
-                    Fresh Computer Science graduate from Assiut University, specializing in backend development 
-                    and algorithmic problem solving. I bring a unique combination of academic excellence and 
-                    practical experience gained through competitive programming and real-world internships.
+                    Full-Stack Software Developer from Egypt with a strong focus on .NET technologies and modern web development. 
+                    I am currently studying at the Information Technology Institute (ITI), where I continue building on my backend,
+                    architecture, and delivery skills through practical, real-world work.
                 </p>
                 <p>
-                    With over 3,000 solved problems across various platforms and consistent improvement in programming 
-                    contests, I've developed strong analytical thinking and efficient coding practices that I'm ready to 
-                    contribute to challenging software development projects.
+                    My background combines freelance delivery, clean code thinking, and problem solving. I care about building
+                    maintainable systems that ship well, work reliably, and fit real business needs.
                 </p>
                 <div class="about-stats">
                     <div class="stat-item">
-       <span class="stat-number">ICPC</span>
-       <span class="stat-label">Instructor</span>
-   </div>
+                        <span class="stat-number">ITI</span>
+                        <span class="stat-label">Current Program</span>
+                    </div>
                     <div class="stat-item">
                         <span class="stat-number">3K+</span>
                         <span class="stat-label">Problems Solved</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">Top 4%</span>
-                        <span class="stat-label">Codeforces Rank</span>
+                        <span class="stat-number">Freelance</span>
+                        <span class="stat-label">Live Systems Delivered</span>
                     </div>
                 </div>
             </div>
@@ -935,6 +967,55 @@
                     <div class="experience-image">
                         <img src="images/1755516438621.jpg" alt="EJADA Internship Certificate" class="experience-img">
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freelance Experience Section -->
+    <section id="freelance" class="section">
+        <h2 class="section-title">Freelance Experience</h2>
+        <p class="section-intro">
+            Selected client work delivered for Mostaql, focused on practical business workflows, deployment, and production-ready implementation.
+        </p>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="images/El eid.png" alt="El-Eid System Project" class="project-image">
+                <span class="project-badge">Freelance / Mostaql</span>
+                <h3>El-Eid System – Eid Sacrifices Management Platform</h3>
+                <p>
+                    Backend-focused management platform for order tracking, delivery scheduling, WhatsApp customer notifications,
+                    and financial reporting with PDF and Excel export support.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">ASP.NET Core</span>
+                    <span class="tech-tag">EF Core</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">JWT</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Railway</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://elmadfoun.up.railway.app/" class="project-link" target="_blank">Live Link</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/Quduraty.png" alt="Quduraty Project" class="project-image">
+                <span class="project-badge">Freelance / Mostaql</span>
+                <h3>Quduraty – Placement Test Platform</h3>
+                <p>
+                    Timed quiz platform that evaluates quantitative level, classifies students, and recommends the most suitable
+                    course based on the result.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Next.js 14</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Google Sheets API</span>
+                    <span class="tech-tag">Vercel</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://quduraty-exams1.vercel.app/" class="project-link" target="_blank">Live Link</a>
                 </div>
             </div>
         </div>
@@ -1036,57 +1117,69 @@
 
     <!-- Projects Section -->
     <section id="projects" class="section">
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-intro">
+            Regular development projects, selected to match the current portfolio structure and the approved screenshots.
+        </p>
         <div class="projects-grid">
             <div class="project-card">
-                <img src="images/1752692238234.jpeg" alt="Team Space Project" class="project-image">
-                <h3>Team Space - Graduation Project</h3>
-                
-                <p>Comprehensive digital platform for Faculty of Computer Science at Assiut University, 
-                   serving 3 user roles with course management, online exams with AI evaluation, 
-                   live lectures, and real-time chat.</p>
+            <img src="images/ecomerce.png" alt="Team Space Project" class="project-image">
+
+                <h3>Lam E-Commerce</h3>
+                <p>
+                    Full-stack e-commerce platform built with ASP.NET Core Web API and Angular, using JWT authentication
+                    and SQL Server persistence.
+                </p>
                 <div class="project-tech">
                     <span class="tech-tag">ASP.NET Core</span>
-                    <span class="tech-tag">ASP.NET Web API</span>
-                    <span class="tech-tag">Entity Framework</span>
+                    <span class="tech-tag">Web API</span>
+                    <span class="tech-tag">Entity Framework Core</span>
+                    <span class="tech-tag">Angular</span>
                     <span class="tech-tag">SQL Server</span>
                     <span class="tech-tag">JWT</span>
-                    <span class="tech-tag">AI Integration</span>
                 </div>
-                <a href="https://github.com/AZIZ20035/Faculty_Graduation_Project" class="project-link" target="_blank">View on GitHub</a>
+                <div class="project-actions">
+                    <a href="https://github.com/AZIZ20035/Lam-Ecommerce" class="project-link" target="_blank">View on GitHub</a>
+                </div>
             </div>
             
             <div class="project-card">
-                <img src="images/Screenshot (2703).png" alt="Job Portal Project" class="project-image">
-                <h3>Job Portal</h3>
-                <p> Job Portal - Full-stack web application connecting companies with job seekers. 
-                    Built with ASP.NET Core, C#, and SQL Server. Features role-based authentication, 
-                    job posting/search, resume management, and application tracking system.</p>
+                <img src="images/teamspace-device-mockup.png" alt="Team Space Project" class="project-image">
+                <h3>Team Space - Graduation Project</h3>
+                <p>
+                    Comprehensive digital platform for the Faculty of Computer Science at Assiut University,
+                    with course management, online exams, live lectures, and real-time chat.
+                </p>
                 <div class="project-tech">
                     <span class="tech-tag">ASP.NET Core</span>
-                    <span class="tech-tag">MVC</span>
-                    <span class="tech-tag">Entity Framework</span>
+                    <span class="tech-tag">Web API</span>
+                    <span class="tech-tag">Entity Framework Core</span>
                     <span class="tech-tag">SQL Server</span>
-                    <span class="tech-tag">HTML/CSS</span>
+                    <span class="tech-tag">JWT</span>
                 </div>
-                <a href="https://github.com/AZIZ20035/Job-Portal" class="project-link" target="_blank">View on GitHub</a>
+                <div class="project-actions">
+                    <a href="https://github.com/AZIZ20035/Faculty_Graduation_Project" class="project-link" target="_blank">View on GitHub</a>
+                </div>
             </div>
             
             <div class="project-card">
-                <img src="images/Screenshot (2716).png" alt="Online Exams System" class="project-image">
-                <h3>Online Exams System</h3>
-                <p>The Online Exam System is a simple MVC web application built with ASP.NET Core 
-                    that allows users to create, manage, and take online exams. 
-                    The system provides a comprehensive platform for educational assessment with automatic 
-                    grade calculation and progress tracking</p>
+                <img src="images/job portal.png" alt="Job Portal Project" class="project-image">
+                <h3>Job Portal System</h3>
+                <p>
+                    Full-stack web application connecting companies with job seekers. Features role-based authentication,
+                    job posting and search, resume management, and application tracking.
+                </p>
                 <div class="project-tech">
                     <span class="tech-tag">ASP.NET Core</span>
                     <span class="tech-tag">MVC</span>
-                    <span class="tech-tag">Entity Framework</span>
+                    <span class="tech-tag">Entity Framework Core</span>
                     <span class="tech-tag">SQL Server</span>
+                    <span class="tech-tag">LINQ</span>
                     <span class="tech-tag">HTML/CSS</span>
                 </div>
-                <a href="https://github.com/AZIZ20035/Online-Exam-1.0" class="project-link" target="_blank">View on GitHub</a>
+                <div class="project-actions">
+                    <a href="https://github.com/AZIZ20035/Job-Portal" class="project-link" target="_blank">View on GitHub</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1149,7 +1242,7 @@
                 <p>+20 114 268 1177</p>
             </div>
             
-            <div class="contact-item" onclick="window.open('https://linkedin.com/in/ahmedabdelaziz-dev', '_blank')">
+            <div class="contact-item" onclick="window.open('https:linkedin.com/in/ahmed-abdelaz1z/', '_blank')">
                 <div class="contact-icon">💼</div>
                  <h3>LinkedIn</h3>
                 <p>Ahmed Abdelaziz</p>
